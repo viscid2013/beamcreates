@@ -23,8 +23,8 @@ img {margin-bottom: -7px}
 <body>
 
 
-
-<nav id="mainMenu" class="w3-bar w3-theme-grey w3-top" style="z-index: 3;">
+<!-- Top Menu (large and medium screens) -->
+<nav id="mainMenu" class="w3-bar w3-theme-grey w3-top w3-hide-small" style="z-index: 3;">
 	<div class="w3-bar-item" style="padding-top: 2px; padding-bottom: 4px">
 		<a href="home.html"><img src="branding_icons/BC_logo_hor_smallest.png" style="height: 10%;" /></a>
 	</div>
@@ -33,6 +33,18 @@ img {margin-bottom: -7px}
     <button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'About')">About</button>
 	<button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'Contact')">Contact</button>
 	<button class="w3-bar-item w3-mobile w3-button w3-hide-large w3-hide-medium" onclick="w3_close()">Close Menu</button>
+  </nav>
+	
+<!-- Sidebar (small screens) -->
+<nav id="sideMenu" class="w3-bar w3-theme-grey w3-top w3-hide-medium w3-hide-large" style="z-index: 3;">
+	<div class="w3-bar-item" style="padding-top: 2px; padding-bottom: 4px">
+		<a href="home.html"><img src="branding_icons/BC_logo_hor_smallest.png" style="height: 10%;" /></a>
+	</div>
+    <button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'Home'); w3_close()">Home</button>
+    <button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'Viscid Creates'); w3_close()">Viscid Creates</button>
+    <button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'About'); w3_close()">About</button>
+	<button class="w3-bar-item w3-mobile w3-button tablink" onclick="openCity(event,'Contact'); w3_close()">Contact</button>
+	<button class="w3-bar-item w3-mobile w3-button w3-hide-large w3-hide-medium" onclick="w3_close(); w3_close()">Close Menu</button>
   </nav>
  
 <!-- Top menu on small screens -->
@@ -101,7 +113,7 @@ function w3_open() {
 }
  
 function w3_close() {
-  document.getElementById("mainMenu").style.display = "none";
+  document.getElementById("sideMenu").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
 	
