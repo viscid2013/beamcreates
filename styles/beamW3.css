@@ -44,6 +44,10 @@
 		display: block;
 	}
 	
+	#sideMenu{
+		display: none;
+	}
+	
 	#topSpace{
 		margin-top: 50px;
 	}
@@ -61,6 +65,10 @@
 	
 	#mainMenu{
 		display: block;
+	}
+	
+	#sideMenu{
+		display: none;
 	}
 	
 	#topSpace{
