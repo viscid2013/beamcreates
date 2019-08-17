@@ -221,9 +221,9 @@ function showAndShrink(el){
 	var elem = document.getElementById(el); 
 	elem.style.display = 'block';
   	var sSize = 100;
-  	var id = setInterval(frame, 10);
+  	var id = setInterval(frame, 25);
   	function frame() {
-    	if (sSize == 1) {
+    	if (sSize < 1) {
       		clearInterval(id);
 			elem.style.display = 'none';
 			elem.style.height = '100%'; 
